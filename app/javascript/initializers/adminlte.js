@@ -1,6 +1,7 @@
-import '../styles/adminlte.scss'
+import '../assets/adminlte.scss'
 
-import "@fortawesome/fontawesome-free";
+import '@fortawesome/fontawesome-free'
 import 'jquery/src/jquery.js'
 import 'popper.js'
-import 'admin-lte/build/js/AdminLTE';
+import 'bootstrap'
+import 'admin-lte/build/js/AdminLTE'
