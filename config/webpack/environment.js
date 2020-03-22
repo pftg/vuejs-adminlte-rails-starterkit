@@ -8,8 +8,9 @@ environment.loaders.prepend('vue', vue)
 environment.splitChunks((config) => Object.assign({}, config, {
   optimization: {
     splitChunks: {
-      minSize: 1000,
-      maxSize: 20000,
+      chunks: 'async',
+      minSize: 30000,
+      maxSize: 100000,
     }
   }
 }))

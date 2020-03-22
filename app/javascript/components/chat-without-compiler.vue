@@ -31,7 +31,7 @@ export default {
 <template>
   <div class="card card-prirary cardutline direct-chat direct-chat-primary">
     <div class="card-header">
-      <h3 class="card-title">Single Chat</h3>
+      <h3 class="card-title">Chat without Compiler</h3>
 
       <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>

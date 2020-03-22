@@ -4,11 +4,12 @@ import Vue from 'vue/dist/vue.common'
 
 Vue.use(TurbolinksAdapter)
 
-import SingleChat from '../components/chat-without-compiler'
+// Lazy loading of the component
+const SingleChat =() => import('../components/chat-without-compiler')
 
 document.addEventListener('turbolinks:load', () => {
-  new Vue({
-    el: '#single-chat',
-    render: h => h(SingleChat),
-  }).$mount('#single-chat')
+  if (document.getElementById('single-chat')) {
+    new Vue({ render: h => h(SingleChat) })
+      .$mount('#single-chat')
+  }
 })
