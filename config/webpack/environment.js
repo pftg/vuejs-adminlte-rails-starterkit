@@ -5,6 +5,13 @@ const vue = require('./loaders/vue')
 environment.plugins.prepend('VueLoaderPlugin', new VueLoaderPlugin())
 environment.loaders.prepend('vue', vue)
 
-environment.splitChunks()
+environment.splitChunks((config) => Object.assign({}, config, {
+  optimization: {
+    splitChunks: {
+      minSize: 1000,
+      maxSize: 20000,
+    }
+  }
+}))
 
 module.exports = environment
